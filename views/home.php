@@ -191,7 +191,7 @@ function escapar(mixed $valor): string
                     name="txtDetalle"
                     id="txtDetalle"
                     placeholder="Ingrese un comentario"
-                    maxlength="255"
+                    maxlength="255" required
                     value="<?= escapar($detalleActual) ?>"
                 >
             </div>
