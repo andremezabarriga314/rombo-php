@@ -44,3 +44,8 @@ php -S 127.0.0.1:8000
 - `views/`: pantallas (login y home)
 - `database/`: script SQL de la base
 - `assetes/`: estilos CSS y JavaScript
+
+
+## Autor
+
+Andre Meza
