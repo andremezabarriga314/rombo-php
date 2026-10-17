@@ -34,3 +34,13 @@ php -S 127.0.0.1:8000
 
 - Correo: `admin@rombo`
 - Clave: `123`
+
+
+## Estructura del proyecto
+
+- `config/`: conexión a la base de datos
+- `controller/`: lógica del login y del CRUD
+- `model/`: consultas SQL de la clase Rombo
+- `views/`: pantallas (login y home)
+- `database/`: script SQL de la base
+- `assetes/`: estilos CSS y JavaScript
