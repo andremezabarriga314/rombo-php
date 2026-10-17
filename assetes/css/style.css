@@ -1,131 +1,207 @@
-/*======================*/
-/*   Login - Pastel     */
-/*======================*/
-:root{
-    --fondo: #f7f3ea;
-    --fondo-2: #eef7f2;
-    --tarjeta: #fffaf3;
-    --primario: #b8a7e6;
-    --primario-oscuro: #826fc0;
-    --secundario: #bdebd6;
-    --acento: #ffd6ba;
-    --texto: #3f3d56;
-    --texto-suave: #6f6a80;
-    --borde: #e3d8f2;
-    --blanco: #ffffff;
-    --sombra: 0 18px 35px rgba(63, 61, 86, 0.14);
+/* ==========================================================
+   Rombo - style.css (login)
+   Mismo sistema visual que style_home.css:
+   papel de dibujo técnico, azul cobalto y el rombo como marca.
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap");
+
+:root {
+    --tinta: #101b33;
+    --tinta-suave: #4a5673;
+    --papel: #f3f5f9;
+    --superficie: #ffffff;
+    --linea: #d9dfea;
+    --cobalto: #2b50e0;
+    --cobalto-oscuro: #1f3cb3;
+    --cobalto-claro: #e8edff;
+    --alerta: #c2373b;
+    --alerta-claro: #fdecec;
+
+    --fuente-titulo: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --fuente-texto: "Figtree", "Segoe UI", system-ui, sans-serif;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-body{
-    min-height: 100vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--texto);
-    background:
-        radial-gradient(circle at top left, rgba(184, 167, 230, 0.35), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(189, 235, 214, 0.45), transparent 35%),
-        var(--fondo);
+html,
+body {
+    height: 100%;
 }
 
-.caja{
+body {
+    margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 25px;
-}
-
-.caja form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: min(430px, 92%);
-    min-height: 500px;
-    padding: 35px 30px;
-    border: 1px solid var(--borde);
-    border-radius: 28px;
-    background: rgba(255, 250, 243, 0.92);
-    box-shadow: var(--sombra);
+    font-family: var(--fuente-texto);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--tinta);
+    background-color: var(--papel);
+    background-image:
+        linear-gradient(45deg, rgba(43, 80, 224, 0.045) 25%, transparent 25%, transparent 75%, rgba(43, 80, 224, 0.045) 75%),
+        linear-gradient(-45deg, rgba(43, 80, 224, 0.045) 25%, transparent 25%, transparent 75%, rgba(43, 80, 224, 0.045) 75%);
+    background-size: 56px 56px;
+    overflow-x: hidden;
 }
 
-form img{
-    width: 165px;
-    margin-bottom: 25px;
-    filter: drop-shadow(0 8px 12px rgba(63, 61, 86, 0.10));
+/* Rombo grande detrás de la tarjeta */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: min(900px, 130vw);
+    height: min(1100px, 150vh);
+    transform: translate(-50%, -50%);
+    background: var(--cobalto-claro);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    opacity: 0.8;
+    pointer-events: none;
 }
 
-form input{
+header,
+footer {
+    flex: none;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- Tarjeta ---------- */
+
+.caja {
     width: 100%;
-    height: 55px;
-    font-size: 20px;
-    border: 1px solid transparent;
-    background-color: var(--fondo-2);
-    color: var(--texto);
-    border-radius: 14px;
-    margin-bottom: 18px;
-    padding-left: 16px;
+    max-width: 400px;
+    padding: 36px 32px 32px;
+    background: var(--superficie);
+    border: 1px solid var(--linea);
+    border-radius: 12px;
+    box-shadow:
+        0 1px 2px rgba(16, 27, 51, 0.06),
+        0 16px 40px rgba(16, 27, 51, 0.12);
+}
+
+#frmLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#frmLogin img {
+    order: 0;
+    align-self: center;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+/* Título generado desde CSS (el HTML no tiene encabezado) */
+#frmLogin::before {
+    content: "Iniciar sesión";
+    order: 1;
+    margin-bottom: 6px;
+    text-align: center;
+    font-family: var(--fuente-titulo);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--tinta);
+}
+
+#frmLogin input {
+    order: 2;
+}
+
+#frmLogin button {
+    order: 3;
+}
+
+/* ---------- Campos ---------- */
+
+#frmLogin input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1.5px solid var(--linea);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--tinta);
+    font: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+#frmLogin input::placeholder {
+    color: #8a94ab;
+}
+
+#frmLogin input:hover {
+    border-color: #b6c0d6;
+}
+
+#frmLogin input:focus {
     outline: none;
-    transition: 0.25s ease;
+    border-color: var(--cobalto);
+    box-shadow: 0 0 0 4px var(--cobalto-claro);
 }
 
-form input::placeholder{
-    color: var(--texto-suave);
-}
+/* ---------- Botón ---------- */
 
-form input:focus{
-    border-color: var(--primario);
-    background-color: var(--blanco);
-    box-shadow: 0 0 0 4px rgba(184, 167, 230, 0.20);
-}
-
-form button{
-    width: 100%;
-    height: 55px;
-    background: linear-gradient(135deg, var(--primario), var(--primario-oscuro));
-    color: var(--blanco);
+#btnIngresar {
+    margin-top: 6px;
+    padding: 13px 22px;
     border: 0;
-    border-radius: 14px;
-    font-size: 22px;
+    border-radius: 8px;
+    background: var(--cobalto);
+    color: #fff;
+    font: inherit;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.25s ease;
+    transition: background 0.15s;
 }
 
-form button:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(130, 111, 192, 0.25);
+#btnIngresar:hover {
+    background: var(--cobalto-oscuro);
 }
 
-form button:active{
-    transform: translateY(0);
+#btnIngresar:focus-visible {
+    outline: 3px solid var(--cobalto);
+    outline-offset: 3px;
 }
 
-/* Medias para login */
-@media (max-width: 976px){
-    .caja form{
-        width: min(520px, 80%);
+/* ---------- Mensaje de error ---------- */
+
+.mensaje {
+    margin: 18px 0 0;
+    padding: 12px 14px;
+    background: var(--alerta-claro);
+    border-left: 4px solid var(--alerta);
+    border-radius: 6px;
+    color: #8f2327;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ---------- Móvil ---------- */
+
+@media (max-width: 480px) {
+    .caja {
+        padding: 28px 20px 24px;
     }
 }
 
-@media (max-width: 760px){
-    .caja form{
-        width: 94%;
-        padding: 28px 22px;
-    }
-
-    form img{
-        width: 135px;
-    }
-
-    form input,
-    form button{
-        height: 50px;
-        font-size: 18px;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
     }
 }
