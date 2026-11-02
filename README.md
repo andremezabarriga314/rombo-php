@@ -1,102 +1,293 @@
- 
-<div align="center">
+ <div align="center">
 
-# ◈ SISTEMA DEL ROMBO
-
-### Aplicación web para el cálculo y la gestión de rombos
-
-Sistema desarrollado con **PHP y MySQL** que permite calcular las propiedades geométricas de un rombo a partir de sus diagonales y administrar los resultados mediante un CRUD completo.
+<img src="https://capsule-render.vercel.app/api?type=venom&height=220&color=0:090E24,45:172554,100:0891B2&text=SISTEMA%20DEL%20ROMBO&fontColor=FFFFFF&fontSize=48&fontAlignY=45&desc=GEOMETRÍA%20%7C%20CÁLCULO%20%7C%20GESTIÓN%20DE%20DATOS&descSize=13&descAlignY=65&animation=fadeIn" width="100%" />
 
 <br>
 
-![PHP](https://img.shields.io/badge/PHP-8-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-Structure-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-Design-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+**Una herramienta digital para calcular, registrar y administrar propiedades geométricas.**
+
+<br>
+
+<img src="https://img.shields.io/badge/PROJECT-GEOMETRY-0EA5E9?style=for-the-badge" />
+<img src="https://img.shields.io/badge/BACKEND-PHP%208-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+<img src="https://img.shields.io/badge/DATABASE-MYSQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/STATUS-DEVELOPMENT-8B5CF6?style=for-the-badge" />
 
 </div>
 
 ---
 
-## 01. Descripción del proyecto
+<div align="center">
 
-**Sistema del Rombo** es una aplicación web que permite ingresar las diagonales mayor y menor de un rombo para obtener automáticamente sus principales propiedades geométricas:
+# ◈ 01 — VISIÓN DEL PROYECTO
 
-- Cálculo del lado.
-- Cálculo del área.
-- Cálculo del perímetro.
-- Almacenamiento de resultados en MySQL.
-- Búsqueda, edición y eliminación de registros.
-- Inicio de sesión para acceder al sistema.
+**GEOMETRIC CALCULATION SYSTEM**
 
-El proyecto integra operaciones matemáticas, conexión a base de datos y gestión de información mediante una arquitectura organizada en PHP.
+</div>
 
-## 02. Funcionalidades principales
+<table>
+<tr>
+<td width="100%">
 
-| Módulo | Descripción |
-|:---|:---|
-| 🔐 Autenticación | Inicio de sesión para acceder a la aplicación. |
-| 📐 Cálculos | Obtención del lado, área y perímetro del rombo. |
-| 💾 Registro | Almacenamiento de los cálculos en MySQL. |
-| 🔎 Búsqueda | Consulta de registros guardados. |
-| ✏️ Edición | Actualización de información registrada. |
-| 🗑️ Eliminación | Eliminación de registros del sistema. |
+El **Sistema del Rombo** es una aplicación web desarrollada para automatizar el cálculo de las propiedades geométricas de un rombo mediante el ingreso de sus diagonales.
 
-## 03. Fórmulas matemáticas
+La aplicación procesa los valores ingresados, determina el lado, el área y el perímetro, y permite almacenar los resultados para su posterior consulta y administración.
 
-El sistema utiliza las siguientes fórmulas para realizar los cálculos:
+Su desarrollo combina procesamiento en PHP, persistencia de información en MySQL e interfaces web construidas con HTML, CSS y JavaScript.
 
-**Área del rombo**
+</td>
+</tr>
+</table>
 
-\[
-A = \frac{D \times d}{2}
-\]
+<div align="center">
 
-**Lado del rombo**
+| 📐 CÁLCULO | 💾 ALMACENAMIENTO | 🔎 CONSULTA | 🔐 ACCESO |
+|:---:|:---:|:---:|:---:|
+| Propiedades geométricas | Base de datos MySQL | Gestión de registros | Inicio de sesión |
 
-\[
-L = \sqrt{\left(\frac{D}{2}\right)^2+\left(\frac{d}{2}\right)^2}
-\]
+</div>
 
-**Perímetro del rombo**
+---
 
-\[
-P = 4 \times L
-\]
+<div align="center">
 
-Donde:
+# ◈ 02 — FUNCIONALIDADES
 
-- `D`: diagonal mayor.
-- `d`: diagonal menor.
-- `L`: longitud del lado.
-- `A`: área.
-- `P`: perímetro.
+*Herramientas integradas para el procesamiento y administración de información.*
 
-## 04. Tecnologías utilizadas
+</div>
 
-| Tecnología | Aplicación |
-|:---|:---|
-| PHP 8 | Procesamiento y lógica del servidor. |
-| PDO | Conexión y consultas a MySQL. |
-| MySQL | Almacenamiento de usuarios y cálculos. |
-| HTML5 | Estructura de las interfaces. |
-| CSS3 | Diseño y presentación visual. |
-| JavaScript | Interactividad del lado del cliente. |
-| XAMPP | Entorno de desarrollo local. |
+<table>
+<tr>
+<td width="50%" valign="top">
 
-## 05. Arquitectura del proyecto
+### <img src="https://img.shields.io/badge/01-AUTHENTICATION-2563EB?style=flat-square" />
 
-El proyecto está organizado por responsabilidades para facilitar su mantenimiento y comprensión.
+**Control de acceso**
+
+Inicio de sesión para acceder a las funcionalidades de la aplicación.
+
+</td>
+<td width="50%" valign="top">
+
+### <img src="https://img.shields.io/badge/02-CALCULATION-0891B2?style=flat-square" />
+
+**Motor matemático**
+
+Cálculo automático del lado, área y perímetro a partir de las diagonales.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### <img src="https://img.shields.io/badge/03-REGISTRATION-7C3AED?style=flat-square" />
+
+**Registro de resultados**
+
+Almacenamiento de los datos calculados en la base de datos.
+
+</td>
+<td width="50%" valign="top">
+
+### <img src="https://img.shields.io/badge/04-SEARCH-0D9488?style=flat-square" />
+
+**Búsqueda de información**
+
+Localización de cálculos previamente registrados.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### <img src="https://img.shields.io/badge/05-UPDATE-D97706?style=flat-square" />
+
+**Edición de registros**
+
+Modificación de la información almacenada.
+
+</td>
+<td width="50%" valign="top">
+
+### <img src="https://img.shields.io/badge/06-DELETE-DC2626?style=flat-square" />
+
+**Eliminación de registros**
+
+Eliminación de datos mediante las operaciones del CRUD.
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+# ◈ 03 — MOTOR DE CÁLCULO
+
+*Fundamento matemático de la aplicación.*
+
+</div>
+
+El sistema utiliza las diagonales mayor y menor como valores de entrada para obtener las tres propiedades principales del rombo.
+
+<details open>
+<summary><strong>01 · CÁLCULO DEL ÁREA</strong></summary>
+
+<br>
+
+<div align="center">
+
+<sub>SUPERFICIE GEOMÉTRICA</sub>
+
+# A = (D × d) / 2
+
+</div>
+
+El área se obtiene multiplicando ambas diagonales y dividiendo el resultado entre dos.
+
+</details>
+
+<details open>
+<summary><strong>02 · CÁLCULO DEL LADO</strong></summary>
+
+<br>
+
+<div align="center">
+
+<sub>LONGITUD DE UN LADO</sub>
+
+# L = √((D/2)² + (d/2)²)
+
+</div>
+
+La longitud del lado se determina mediante el teorema de Pitágoras, utilizando las mitades de las diagonales.
+
+</details>
+
+<details open>
+<summary><strong>03 · CÁLCULO DEL PERÍMETRO</strong></summary>
+
+<br>
+
+<div align="center">
+
+<sub>CONTORNO TOTAL</sub>
+
+# P = 4 × L
+
+</div>
+
+El perímetro se calcula multiplicando la longitud de uno de sus lados por cuatro.
+
+</details>
+
+<div align="center">
+
+| VARIABLE | SIGNIFICADO |
+|:---:|---|
+| `D` | Diagonal mayor |
+| `d` | Diagonal menor |
+| `L` | Longitud del lado |
+| `A` | Área del rombo |
+| `P` | Perímetro del rombo |
+
+</div>
+
+---
+
+<div align="center">
+
+# ◈ 04 — STACK TECNOLÓGICO
+
+*Tecnologías que conforman la solución.*
+
+</div>
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="48"/>
+
+**PHP 8**
+
+<sub>Lógica del servidor y procesamiento de operaciones.</sub>
+
+</td>
+<td align="center" width="33%">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="48"/>
+
+**MySQL**
+
+<sub>Gestión y almacenamiento de información.</sub>
+
+</td>
+<td align="center" width="33%">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="48"/>
+
+**HTML5**
+
+<sub>Estructura de las interfaces web.</sub>
+
+</td>
+</tr>
+<tr>
+<td align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="48"/>
+
+**CSS3**
+
+<sub>Estilos y presentación visual.</sub>
+
+</td>
+<td align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="48"/>
+
+**JavaScript**
+
+<sub>Interactividad del lado del cliente.</sub>
+
+</td>
+<td align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" width="48"/>
+
+**XAMPP**
+
+<sub>Entorno local para ejecutar PHP y MySQL.</sub>
+
+</td>
+</tr>
+</table>
+
+**Tecnología de acceso a datos:** PDO (PHP Data Objects), utilizado para establecer la conexión con MySQL y ejecutar consultas parametrizadas.
+
+---
+
+<div align="center">
+
+# ◈ 05 — ARQUITECTURA DEL SISTEMA
+
+*Organización modular del código fuente.*
+
+</div>
+
+La estructura del proyecto separa la conexión a la base de datos, la lógica de negocio, las consultas y las interfaces de usuario.
 
 ```text
-SISTEMA-ROMBO/
+SISTEMA-DEL-ROMBO/
 │
 ├── config/
 │   └── Database.php
 │
 ├── controller/
-│   └── Controladores del sistema
+│   └── Controladores de autenticación y CRUD
 │
 ├── model/
 │   └── Rombo.php
@@ -115,105 +306,153 @@ SISTEMA-ROMBO/
 └── README.md
 ```
 
-## 06. Flujo de funcionamiento
+### DIAGRAMA DE COMPONENTES
 
 ```mermaid
-flowchart TD
-    A([Inicio]) --> B[Inicio de sesión]
-    B --> C[Ingresar diagonales]
-    C --> D[Procesar cálculos]
-    D --> E[Obtener lado, área y perímetro]
-    E --> F[Guardar en MySQL]
-    F --> G[Consultar registros]
-    G --> H[Editar o eliminar]
-    H --> I([Fin])
+flowchart TB
+    U([USUARIO])
+    V[INTERFAZ WEB<br/>HTML · CSS · JavaScript]
+    C[CONTROLADORES<br/>PHP]
+    M[MODELO<br/>Rombo.php]
+    DB[(BASE DE DATOS<br/>MySQL)]
+    CFG[CONFIGURACIÓN<br/>PDO]
 
-    style A fill:#172554,stroke:#38BDF8,color:#fff
-    style B fill:#312E81,stroke:#818CF8,color:#fff
-    style D fill:#164E63,stroke:#22D3EE,color:#fff
-    style F fill:#14532D,stroke:#4ADE80,color:#fff
-    style I fill:#172554,stroke:#38BDF8,color:#fff
+    U --> V
+    V --> C
+    C --> M
+    M --> CFG
+    CFG --> DB
+    DB --> M
+    M --> C
+    C --> V
+
+    style U fill:#172554,stroke:#38BDF8,color:#fff
+    style V fill:#1E3A8A,stroke:#60A5FA,color:#fff
+    style C fill:#312E81,stroke:#A78BFA,color:#fff
+    style M fill:#164E63,stroke:#22D3EE,color:#fff
+    style DB fill:#14532D,stroke:#4ADE80,color:#fff
+    style CFG fill:#3F1D5A,stroke:#C084FC,color:#fff
 ```
 
-## 07. Instalación y ejecución
+---
 
-### Requisitos
+<div align="center">
 
-- PHP 8 o superior.
-- MySQL.
-- XAMPP.
-- Navegador web.
-- MySQL Workbench o phpMyAdmin (para importar la base de datos).
+# ◈ 06 — INSTALACIÓN Y CONFIGURACIÓN
 
-### Pasos de instalación
+*Guía para ejecutar el proyecto en un entorno local.*
 
-**1. Iniciar servicios**
+</div>
 
-Abre XAMPP y activa los servicios:
+### REQUISITOS DEL ENTORNO
 
-- Apache
-- MySQL
+| COMPONENTE | REQUISITO |
+|---|---|
+| Lenguaje | PHP 8 o superior |
+| Base de datos | MySQL |
+| Servidor local | XAMPP |
+| Acceso a datos | PDO |
+| Navegador | Chrome, Edge o Firefox |
 
-**2. Crear la base de datos**
+### PROCESO DE INSTALACIÓN
 
-Abre MySQL Workbench o phpMyAdmin y ejecuta el archivo:
+**PASO 01 — ACTIVAR EL ENTORNO**
+
+Inicia XAMPP y activa los servicios Apache y MySQL.
+
+**PASO 02 — IMPORTAR LA BASE DE DATOS**
+
+Desde phpMyAdmin o MySQL Workbench, ejecuta el script:
 
 ```text
 database/rombo_db.sql
 ```
 
-**3. Configurar la conexión**
+**PASO 03 — CONFIGURAR LA CONEXIÓN**
 
-Revisa el archivo `config/Database.php` y verifica los parámetros:
+Abre `config/Database.php` y verifica los parámetros de conexión:
 
 ```text
-Host:     127.0.0.1
-Puerto:   3306
-Usuario:  root
+HOST:       127.0.0.1
+PORT:       3306
+DATABASE:   Nombre definido en el script SQL
+USER:       root
+PASSWORD:   Según tu configuración local
 ```
 
-**4. Iniciar el servidor PHP**
+**PASO 04 — EJECUTAR EL SERVIDOR**
 
-Desde la terminal, ubícate en la carpeta del proyecto y ejecuta:
+Desde la terminal, ingresa a la carpeta raíz del proyecto y ejecuta:
 
 ```bash
 php -S 127.0.0.1:8000
 ```
 
-**5. Acceder a la aplicación**
-
-Abre en tu navegador:
-
-```text
-http://127.0.0.1:8000/views/login.php
-```
-
-## 08. Credenciales de acceso
-
-<details>
-<summary><strong>Ver credenciales de prueba</strong></summary>
-
-| Campo | Credencial |
-|:---|:---|
-| Correo | `admin@rombo` |
-| Contraseña | `123` |
-
-</details>
-
-> Estas credenciales son para el entorno de prueba local.
-
-## 09. Autor
+**PASO 05 — INGRESAR A LA APLICACIÓN**
 
 <div align="center">
 
-### ANDRE MEZA
+<a href="http://127.0.0.1:8000/views/login.php">
 
-Desarrollo de software · Aplicaciones web · PHP · MySQL
+`http://127.0.0.1:8000/views/login.php`
+
+</a>
+
+</div>
 
 ---
 
-**Sistema del Rombo**
+<div align="center">
 
-*Proyecto de desarrollo web orientado al cálculo geométrico y gestión de datos.*
+# ◈ 07 — ACCESO AL SISTEMA
+
+*Credenciales disponibles para las pruebas locales.*
+
+</div>
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+<sub>USUARIO / CORREO</sub>
+
+### `admin@rombo`
+
+</td>
+<td align="center" width="50%">
+
+<sub>CONTRASEÑA</sub>
+
+### `123`
+
+</td>
+</tr>
+</table>
+
+> **Nota:** Son credenciales de prueba. Para un entorno real, se recomienda utilizar contraseñas seguras y almacenamiento mediante hash.
+
+---
+
+<div align="center">
+
+# ◈ 08 — AUTOR DEL PROYECTO
+
+<img src="https://img.shields.io/badge/DEVELOPER-ANDRE%20MEZA-2563EB?style=for-the-badge&logo=github&logoColor=white" />
+
+### ANDRE MEZA
+
+**Desarrollo de software · Aplicaciones web · Gestión de datos**
+
+<br>
+
+<sub>PROYECTO DE DESARROLLO WEB</sub>
+
+**SISTEMA DEL ROMBO**
+
+<sub>Una solución que integra geometría, programación y persistencia de datos.</sub>
+
+<br>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:090E24,50:172554,100:0891B2&height=100&section=footer" width="100%" />
 
 </div>
